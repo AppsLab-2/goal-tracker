@@ -1,5 +1,4 @@
 package com.example.goalTracker;
-import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,17 +11,15 @@ public class Goals {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String name;
-    private Date date;
     private int priority;
 
     public Goals (){
 
     }
 
-    public Goals(int id, String name, Date date, int priority) {
+    public Goals(int id, String name, int priority) {
         this.id = id;
         this.name = name;
-        this.date = date;
         this.priority = priority;
     }
 
@@ -40,14 +37,6 @@ public class Goals {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public int getPriority() {

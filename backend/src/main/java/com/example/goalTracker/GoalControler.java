@@ -1,7 +1,8 @@
 package com.example.goalTracker;
 
-import com.example.goalTracker.Goals;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -10,12 +11,13 @@ public class GoalControler {
     public GoalControler(GoalService goalService){
         this.goalService = goalService;
     }
+
     @GetMapping("/")
-    public String mainPage(){
-        Goals goals = new Goals();
-        goals.setName("ricardo");
-        goals.setPriority(4325352);
+    public Iterable<Goals> mainPage(){
+        return (goalService.returnGoal());
+    }
+    @PostMapping("/dotaznik")
+    public void dotaznik(@RequestBody Goals goals){
         goalService.saveGoal(goals);
-        return ("Hello mainpage");
     }
 }
