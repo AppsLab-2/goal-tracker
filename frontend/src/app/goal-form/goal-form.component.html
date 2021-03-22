@@ -1,0 +1,47 @@
+<div class="container">
+    <div [hidden]="submitted">
+      <h1>Goal Form</h1>
+      <form (ngSubmit)="onSubmit()" #goalForm="ngForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name"
+                 required maxlength="20"
+                 [(ngModel)]="model.name" name="name"
+                 #name="ngModel">
+          <div [hidden]="name.valid || name.pristine"
+               class="alert alert-danger">
+            Name is required
+          </div>
+        </div>
+
+        <div class="form-group">
+            <p><label>Date/Time</label></p>
+            <input style="width: 1140px; height: 35px; border-radius: 5px;" type="datetime-local" 
+            name="datetime" required 
+            [(ngModel)]="model.datetime" name="datetime"
+            #datetime="ngModel">
+        </div>
+  
+        <div class="form-group">
+          <label for="priority">Priority</label>
+          <select class="form-control" id="priority"
+                  required
+                  [(ngModel)]="model.priority" name="priority"
+                  #priority="ngModel">
+            <option *ngFor="let priority of priorites" [value]="priority">{{priority}}%</option>
+          </select>
+          <div [hidden]="priority.valid || priority.pristine" class="alert alert-danger">
+            Priority is required
+          </div>
+        </div>
+        
+        <div class="form-group">
+            <p><label>Special Instructions</label></p>
+            <textarea name="description" style="width: 1140px; height: 200px; border-radius: 5px;"></textarea>
+        </div>
+
+        <button type="create" class="btn btn-success" [disabled]="!goalForm.form.valid" (click)="create()" routerLink="/homepage">Create Goal</button>
+        <button type="button" class="btn btn-default" (click)="newGoal(); goalForm.reset()">New Goal</button>
+      </form>
+    </div>
+</div>

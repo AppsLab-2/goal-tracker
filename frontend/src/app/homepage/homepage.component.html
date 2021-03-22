@@ -1,0 +1,10 @@
+<div style="height:717px;width:1918px;padding: 15px 0px;border:none;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+  <ul class="goals">
+    <li *ngFor="let goal of goals">
+      <span>{{goal.name}}</span>
+    </li>
+  </ul>
+  <div class="goals">
+      <button class="add"><a routerLink="/goal-form">+</a></button>
+  </div>
+</div>
