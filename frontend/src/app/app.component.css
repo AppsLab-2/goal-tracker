@@ -12,7 +12,7 @@ h2, h3 {
   }
 body {
     margin: 2em;
-    background-color: azure;
+
   }
 body, input[type="text"], button {
     color: #333;
@@ -31,7 +31,7 @@ h4{
   text-align: center;
   font-family: Arial;
   margin-top: 25px;
-  color: rgb(104, 101, 101);
+  color: rgb(245, 187, 27);  /* rgb(104, 101, 101)*/
 }
 
 
@@ -43,4 +43,8 @@ h4{
   position: absolute;
   margin-top: 40px;
   margin-left: 1500px;
+}
+
+img{
+  position: absolute;
 }

@@ -12,16 +12,16 @@ export class GoalFormComponent {
 
   constructor(private goalService:GoalService) { }
 
-  priorites = [ 25, 50, 75, 100 ];
+  priorites = [ 5, 4, 3, 2, 1 ];
 
-  model = new Goal(11,'Beh', '', 75, '',);
+  model = new Goal(11,'Beh', '', 4, '',);
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newGoal() {
-    this.model = new Goal(11,'', '', 75, '',);
+    this.model = new Goal(11,'', '', 4, '',);
   }
 
   create():void {

@@ -1,10 +1,22 @@
+<div class="marginbtn">
+  <div class="dropdown">
+    <button class="sort">{{sortBy}} ▼</button>
+    <div class="dropdownbtn">
+      <a class="property" (click)="sort('ID')">ID</a>
+      <a class="property" (click)="sort('Name')">Name</a>
+      <a class="property" (click)="sort('Date')">Date</a>
+      <a class="property" (click)="sort('Priority')">Priority</a>
+    </div>
+  </div>
+</div>
 <div style="height:717px;width:1918px;padding: 15px 0px;border:none;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
   <ul class="goals">
     <li *ngFor="let goal of goals">
       <span>{{goal.name}}</span>
+      <p class="date">{{goal.datetime}}</p>
     </li>
   </ul>
   <div class="goals">
-      <button class="add"><a routerLink="/goal-form">+</a></button>
+    <a routerLink="/goal-form"><button class="add">+</button></a>
   </div>
 </div>

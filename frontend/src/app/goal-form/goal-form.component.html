@@ -23,12 +23,12 @@
         </div>
   
         <div class="form-group">
-          <label for="priority">Priority</label>
+          <label for="priority">Priority (5 = max, 1 = min)</label>
           <select class="form-control" id="priority"
                   required
                   [(ngModel)]="model.priority" name="priority"
                   #priority="ngModel">
-            <option *ngFor="let priority of priorites" [value]="priority">{{priority}}%</option>
+            <option *ngFor="let priority of priorites" [value]="priority">{{priority}}</option>
           </select>
           <div [hidden]="priority.valid || priority.pristine" class="alert alert-danger">
             Priority is required
@@ -37,7 +37,7 @@
         
         <div class="form-group">
             <p><label>Special Instructions</label></p>
-            <textarea name="description" style="width: 1140px; height: 200px; border-radius: 5px;"></textarea>
+            <textarea name="description" style="width: 1140px; height: 362px; border-radius: 5px;"></textarea>
         </div>
 
         <button type="create" class="btn btn-success" [disabled]="!goalForm.form.valid" (click)="create()" routerLink="/homepage">Create Goal</button>
