@@ -34,17 +34,8 @@ h4{
   color: rgb(245, 187, 27);  /* rgb(104, 101, 101)*/
 }
 
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-.mode{
-  position: absolute;
-  margin-top: 40px;
-  margin-left: 1500px;
-}
-
 img{
   position: absolute;
+  margin-top: 15px;
+  margin-left: 645px;
 }

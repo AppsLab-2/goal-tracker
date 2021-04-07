@@ -35,7 +35,7 @@ export class HomepageComponent implements OnInit {
       this.goals.sort((a,b) => b.priority > a.priority ? 1 : -1);
 
       if(this.sortBy === 'Date')
-      this.goals.sort((a,b) => a.datetime.localeCompare(b.datetime));
+      this.goals.sort((a,b) => a.date.localeCompare(b.date));
   }
 
 }
