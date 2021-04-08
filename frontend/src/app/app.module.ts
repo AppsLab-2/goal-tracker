@@ -27,9 +27,8 @@ import { GoalDetailComponent } from './goal-detail/goal-detail.component';
     MatSliderModule,
     FormsModule,
     HttpClientModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false })
+    //HttpClientInMemoryWebApiModule.forRoot(
+      //InMemoryDataService, { dataEncapsulation: false })
   ],
   providers: [],
   bootstrap: [AppComponent]

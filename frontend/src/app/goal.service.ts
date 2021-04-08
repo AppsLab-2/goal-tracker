@@ -8,7 +8,7 @@ import { Goal } from './goal';
 })
 export class GoalService {
 
-  private goalsUrl = 'api/goals';
+  private goalsUrl = 'http://localhost:8080/api/goals';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -19,7 +19,7 @@ export class GoalService {
 
 
   getGoals(): Observable<Goal[]> {
-    return this.http.get<Goal[]>(this.goalsUrl)
+    return this.http.get<Goal[]>(this.goalsUrl);
   }
 
   getGoal(id: number): Observable<Goal> {
@@ -28,7 +28,7 @@ export class GoalService {
   }
 
   addGoal(goal: Goal): Observable<Goal> {
-    return this.http.post<Goal>(this.goalsUrl, goal, this.httpOptions)
+    return this.http.post<Goal>(this.goalsUrl, goal, this.httpOptions);
   }
 
   updateGoal(goal: Goal): Observable<any> {
