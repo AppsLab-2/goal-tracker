@@ -11,12 +11,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    GoalFormComponent
+    GoalFormComponent,
+    GoalDetailComponent
   ],
   imports: [
     BrowserModule,

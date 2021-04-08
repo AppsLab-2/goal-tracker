@@ -14,14 +14,14 @@ export class GoalFormComponent {
 
   priorites = [ 5, 4, 3, 2, 1 ];
 
-  model = new Goal(11,'Beh', '', 4, '',);
+  model = new Goal(11,'Beh', '', this.priorites[4], '',);
 
   submitted = false;
 
   onSubmit() { this.submitted = true; }
 
   newGoal() {
-    this.model = new Goal(11,'', '', 4, '',);
+    this.model = new Goal( 11,'', '', 4, '',);
   }
 
   create():void {

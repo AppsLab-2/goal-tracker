@@ -22,7 +22,16 @@ export class GoalService {
     return this.http.get<Goal[]>(this.goalsUrl)
   }
 
+  getGoal(id: number): Observable<Goal> {
+    const url = `${this.goalsUrl}/${id}`;
+    return this.http.get<Goal>(url);
+  }
+
   addGoal(goal: Goal): Observable<Goal> {
-    return this.http.post<Goal>(this.goalsUrl, goal, this.httpOptions).pipe()
+    return this.http.post<Goal>(this.goalsUrl, goal, this.httpOptions)
+  }
+
+  updateGoal(goal: Goal): Observable<any> {
+    return this.http.put(this.goalsUrl, goal, this.httpOptions);
   }
 }
