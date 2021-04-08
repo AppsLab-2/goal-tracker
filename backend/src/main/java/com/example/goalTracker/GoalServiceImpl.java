@@ -16,6 +16,9 @@ public class GoalServiceImpl implements GoalService{
     public void saveGoal(Goals goals) {
         goalRepository.save(goals);
     }
-    public Iterable<Goals> returnGoal(){return goalRepository.findAll();}
+    @Override
+    public Iterable<Goals> returnGoal(){
+        return goalRepository.findAll();
+    }
 
 }

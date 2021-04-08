@@ -12,11 +12,11 @@ public class GoalControler {
         this.goalService = goalService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/api/goals")
     public Iterable<Goals> mainPage(){
         return (goalService.returnGoal());
     }
-    @PostMapping("/dotaznik")
+    @PostMapping("/api/goals")
     public void dotaznik(@RequestBody Goals goals){
         goalService.saveGoal(goals);
     }
