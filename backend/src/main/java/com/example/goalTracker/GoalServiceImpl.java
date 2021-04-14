@@ -20,5 +20,10 @@ public class GoalServiceImpl implements GoalService{
     public Iterable<Goals> returnGoal(){
         return goalRepository.findAll();
     }
-
+    @Override
+    public void deleteGoal(Integer id){
+        goalRepository.deleteById(id);
+    }
+    @Override
+    public Goals getGoal(Integer id){return goalRepository.findById(id).get();}
 }
