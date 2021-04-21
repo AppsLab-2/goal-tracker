@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import java.util.GregorianCalendar;
 
 @Entity
 public class Goals {
@@ -13,11 +14,11 @@ public class Goals {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String name;
-    private String date;
+    private GregorianCalendar date;
     private int priority;
     private String description;
 
-    public Goals(int id, String name, String date, int priority, String description) {
+    public Goals(int id, String name, GregorianCalendar date, int priority, String description) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -45,11 +46,11 @@ public class Goals {
         this.name = name;
     }
 
-    public String getDate() {
+    public GregorianCalendar getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(GregorianCalendar date) {
         this.date = date;
     }
 
