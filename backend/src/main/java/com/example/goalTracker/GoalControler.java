@@ -19,12 +19,12 @@ public class GoalControler {
     public void dotaznik(@RequestBody Goals goals){
         goalService.saveGoal(goals);
     }
-    @DeleteMapping("goals")
-    public void deleteGoal(@RequestBody Integer id){
+    @DeleteMapping("goals/{id}")
+    public void deleteGoal(@PathVariable Integer id){
         goalService.deleteGoal(id);
     }
-    @GetMapping("goals")
-    public Goals getGoal(@RequestBody Integer id){
+    @GetMapping("goals/{id}")
+    public Goals getGoal(@PathVariable Integer id){
         return goalService.getGoal(id);
     }
 
