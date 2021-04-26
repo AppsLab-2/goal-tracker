@@ -23,7 +23,7 @@ public class GoalControler {
     public void deleteGoal(@RequestBody Integer id){
         goalService.deleteGoal(id);
     }
-    @GetMapping("goal")
+    @GetMapping("goals")
     public Goals getGoal(@RequestBody Integer id){
         return goalService.getGoal(id);
     }
