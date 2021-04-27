@@ -23,16 +23,13 @@ export class GoalDetailComponent implements OnInit {
   }
 
   getGoal(): void {
-
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.goalService.getGoal(id)
+      .subscribe(goal => this.goal = goal);
   }
 
-  goBack(): void {
+  home(): void {
     this.location.back();
-  }
-
-  save(): void {
-    this.goalService.updateGoal(this.goal)
-      .subscribe(() => this.goBack());
   }
 
 }

@@ -12,8 +12,20 @@
 <div style="height:717px;width:1918px;padding: 15px 0px;border:none;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
   <ul class="goals">
     <li *ngFor="let goal of goals">
-      <span>{{goal.name}}</span>
-      <p class="date">Complete by {{goal.date}}</p>
+      <a class="detail" routerLink="/detail/{{goal.id}}">
+        <span>{{goal.name}}</span>
+        <p class="date">Complete by {{goal.date}}</p>
+      </a>
+      <div class="drop">
+        <button class="options"><strong>...</strong></button>
+        <div class="optionsbtn">
+          <a class="option" (click)="do('Open',goal)">Open</a>
+          <a class="option" (click)="do('Finish',goal)">Finish</a>
+          <a class="option" (click)="do('Delete',goal)">Delete</a>
+          <a class="option" (click)="do('Edit',goal)">Edit</a>
+
+        </div>
+      </div>
     </li>
   </ul>
   <div class="goals">

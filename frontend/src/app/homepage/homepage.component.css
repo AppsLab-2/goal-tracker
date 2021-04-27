@@ -20,7 +20,7 @@
     font-size: 3em;
   }
   
-.goals button{
+.add{
     background-color: rgb(245, 187, 27);
     color: black;
     box-shadow: 4px 4px rgb(230, 175, 26);
@@ -33,12 +33,12 @@
     font-size: xx-large;
 }
 
-.goals li:hover, .sort:hover {
+.goals li:hover, .sort:hover, .options:hover {
     background-color: #e6e6e6;
     color: rgb(245, 187, 27);
 }
 
-.goals button:hover {
+.add:hover {
   background-color: rgb(230, 175, 26);
   color: #eee;
 }
@@ -102,4 +102,57 @@
   margin-top: -20px;
   margin-bottom: 10px;
   margin-left: 935px;
+}
+
+.detail{
+  text-decoration: none;
+  color: black;
+}
+
+.detail:hover{
+  color: rgb(245, 187, 27);
+}
+
+.options{
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: x-large;
+  display: block;
+  margin: -105px 550px;
+  background-color: #eee;
+  color: black;
+  position: relative;
+  transform: rotate(90deg);
+}
+
+.optionsbtn{
+  display: none;
+  position: absolute;
+  width: 80px;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 2px 8px 8px 2px #cacaca;
+  margin-left: 600px;
+  margin-top: 60px;
+}
+
+.option{
+  padding: 12px 15px;
+  display: block;
+  text-decoration: none;
+  font-size: large;
+  color: black;
+}
+
+.option:hover {
+  background-color: #eee;
+  color: rgb(245, 187, 27);
+  cursor: pointer;
+}
+
+.drop:hover .optionsbtn {
+  display: block;
 }

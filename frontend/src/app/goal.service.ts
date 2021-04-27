@@ -8,7 +8,7 @@ import { Goal } from './goal';
 })
 export class GoalService {
 
-  private goalsUrl = 'http://localhost:8080/api/goals';
+  private goalsUrl = 'http://localhost:8080/api/goals'; //'http://localhost:8080/api/goals'
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -33,5 +33,11 @@ export class GoalService {
 
   updateGoal(goal: Goal): Observable<any> {
     return this.http.put(this.goalsUrl, goal, this.httpOptions);
+  }
+
+  deleteGoal(goal: Goal | number): Observable<Goal> {
+    const id = typeof goal === 'number' ? goal : goal.id;
+    const url = `${this.goalsUrl}/${id}`;
+    return this.http.delete<Goal>(url, this.httpOptions);
   }
 }
