@@ -17,12 +17,12 @@
         <p class="date">Complete by {{goal.date}}</p>
       </a>
       <div class="drop">
-        <button class="options"><strong>...</strong></button>
-        <div class="optionsbtn">
-          <a class="option" (click)="do('Open',goal)">Open</a>
+        <button class="optionsbtn"><strong>...</strong></button>
+        <div class="optionsbox">
+          <a class="option" (click)="do('Open',goal)" routerLink="/detail/{{goal.id}}" >Open</a>
           <a class="option" (click)="do('Finish',goal)">Finish</a>
           <a class="option" (click)="do('Delete',goal)">Delete</a>
-          <a class="option" (click)="do('Edit',goal)">Edit</a>
+          <a class="option" (click)="do('Edit',goal)" routerLink="/goal-form/{{goal.id}}">Edit</a>
 
         </div>
       </div>

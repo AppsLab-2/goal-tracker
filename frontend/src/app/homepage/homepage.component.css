@@ -113,7 +113,7 @@
   color: rgb(245, 187, 27);
 }
 
-.options{
+.optionsbtn{
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -128,13 +128,13 @@
   transform: rotate(90deg);
 }
 
-.optionsbtn{
+.optionsbox{
   display: none;
   position: absolute;
   width: 80px;
   z-index: 1;
-  background-color: white;
-  box-shadow: 2px 8px 8px 2px #cacaca;
+  background-color: #e6e6e6;
+  box-shadow: 2px 5px 5px 2px #9c9c9c;
   margin-left: 600px;
   margin-top: 60px;
 }
@@ -153,6 +153,6 @@
   cursor: pointer;
 }
 
-.drop:hover .optionsbtn {
+.drop:hover .optionsbox {
   display: block;
 }

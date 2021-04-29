@@ -11,7 +11,8 @@ export class HomepageComponent implements OnInit {
   goals!: Goal[];
   sortBy: string = 'ID';
   doBy: string;
-  
+  route: any;
+  goal: Goal;
 
   constructor(private goalService: GoalService) { }
 
@@ -46,10 +47,6 @@ export class HomepageComponent implements OnInit {
   if(this.doBy === 'Delete'){
     this.goals = this.goals.filter(h => h !== goal);
     this.goalService.deleteGoal(goal).subscribe();
-  }
-
-  if(this.doBy === 'Open'){
-
   }
 
   if(this.doBy === 'Finish'){
