@@ -53,10 +53,6 @@ export class HomepageComponent implements OnInit {
     
   }
 
-  if(this.doBy === 'Edit'){
-    
-  }
-
 }
 }
 
