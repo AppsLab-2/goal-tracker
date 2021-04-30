@@ -1,8 +1,15 @@
-<button (click)="home()" class="btnhome">Home</button>
 <div *ngIf="goal" class="detail">
   <div class="name"><strong>{{goal.name}}</strong></div>
   <div class="description"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu tellus est. In augue tellus, scelerisque sit amet dui eget, interdum dignissim velit. Mauris sed magna tempus nisl egestas vulputate. In viverra nunc nunc, ut rhoncus erat pretium ac. Fusce luctus fermentum enim non tempor. Nunc ut suscipit nulla. Integer ultrices consectetur neque.
     Duis pulvinar ut metus sit amet euismod. Aliquam rutrum lacus in iaculis suscipit. Maecenas lacinia arcu in blandit vulputate. In hac habitasse platea dictumst. Praesent ut elit eros. Integer sodales, leo vel feugiat porttitor, ipsum ex mattis nibh, ac dapibus sem erat nec eros. Vivamus suscipit enim ut dapibus sagittis. Nunc eu massa elementum, auctor lectus nec, dapibus nibh. </span>{{goal.description}}</div>
   
   <div class="date"><span>Complete by </span>{{goal.date}}<span> | Priority </span>{{goal.priority}}</div>
+</div>
+
+<div class="accessory">
+  <div class="clock"> 
+    <h4><a style="text-decoration:none;" href="https://www.zeitverschiebung.net/en/city/3060835"></a></h4> 
+    <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=small&timezone=Europe%2FBratislava" width="100%" height="90" frameborder="0" seamless></iframe> 
+  </div>
+  <button (click)="home()" class="btnhome">Home</button>
 </div>

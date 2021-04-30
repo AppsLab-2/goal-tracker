@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { Goal } from './goal';
 
 @Injectable({
@@ -39,5 +39,12 @@ export class GoalService {
     const id = typeof goal === 'number' ? goal : goal.id;
     const url = `${this.goalsUrl}/${id}`;
     return this.http.delete<Goal>(url, this.httpOptions);
+  }
+
+  searchGoals(term: string): Observable<Goal[]> {
+    if (!term.trim()) {
+      return of([]);
+    }
+    return this.http.get<Goal[]>(`${this.goalsUrl}/?name=${term}`)
   }
 }
