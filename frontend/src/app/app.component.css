@@ -43,3 +43,10 @@ img{
   margin-top: 22px;
   margin-left: -240px;
 }
+
+.menu{
+  position: absolute;
+  cursor: pointer;
+  margin-top: -100px;
+  margin-left: 1800px;
+}

@@ -13,6 +13,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { SearchComponent } from './search/search.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchComponent } from './search/search.component';
     HomepageComponent,
     GoalFormComponent,
     GoalDetailComponent,
-    SearchComponent
+    SearchComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
