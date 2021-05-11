@@ -4,6 +4,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { GoalFormComponent } from './goal-form/goal-form.component';
 import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { MenuComponent } from './menu/menu.component';
+import { GoalEditComponent } from './goal-edit/goal-edit.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'goal-form', component: GoalFormComponent },
   { path: 'detail/:id', component: GoalDetailComponent },
   { path: 'menu', component: MenuComponent },
+  { path: 'edit/:id', component: GoalEditComponent },
 ];
 
 @NgModule({

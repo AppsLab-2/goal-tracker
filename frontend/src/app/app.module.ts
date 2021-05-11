@@ -14,6 +14,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { SearchComponent } from './search/search.component';
 import { MenuComponent } from './menu/menu.component';
+import { GoalEditComponent } from './goal-edit/goal-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuComponent } from './menu/menu.component';
     GoalFormComponent,
     GoalDetailComponent,
     SearchComponent,
-    MenuComponent
+    MenuComponent,
+    GoalEditComponent
   ],
   imports: [
     BrowserModule,

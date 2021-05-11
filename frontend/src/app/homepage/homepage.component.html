@@ -24,7 +24,8 @@
           <a class="option" (click)="do('Open',goal)" routerLink="/detail/{{goal.id}}" >Open</a>
           <a class="option" (click)="do('Finish',goal)">Finish</a>
           <a class="option" (click)="do('Delete',goal)">Delete</a>
-          <a class="option" (click)="do('Edit',goal)">Edit</a>
+          <a class="option" (click)="do('Edit',goal)" routerLink="/edit/{{goal.id}}">Edit</a>
+          <!--<a class="option" (click)="do('Favourite',goal)">Add to favourite</a>-->
         </div>
       </div>
     </li>

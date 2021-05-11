@@ -4,7 +4,6 @@
   text-align: center;
   padding: 25px;
   margin-top: 50px;
-  margin-bottom: 555px;
   margin-left: 500px;
   margin-right: 500px;
   background-color: #e6e6e6;
@@ -36,7 +35,7 @@
 .btnhome{
   position: absolute;
   margin-left: 1800px;
-  margin-top: -700px;
+  margin-top: -150px;
   background-color: rgb(245, 187, 27);
   border-radius: 5px;
   border: rgb(245, 187, 27);
@@ -45,14 +44,26 @@
   color: black;
 }
 
-.btnhome:hover{
+.btnedit{
+  position: absolute;
+  margin-left: 1650px;
+  margin-top: -150px;
+  background-color: rgb(245, 187, 27);
+  border-radius: 5px;
+  border: rgb(245, 187, 27);
+  cursor: pointer;
+  padding: 10px;
+  color: black;
+}
+
+.btnhome:hover, .btnedit:hover{
   background-color: rgb(230, 175, 26);
   color: white;
 }
 
 .clock{
   position: absolute;
-  margin-top: -735px;
+  margin-top: -180px;
   margin-left: 1600px;
   background-color: #e6e6e6;
   border-radius: 10px;

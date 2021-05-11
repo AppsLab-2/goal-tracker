@@ -1,0 +1,27 @@
+<div style="height: 210px;">
+    <div *ngIf="goal" class="detail">
+      <div class="name"><strong>{{goal.name}}</strong></div>
+      <div class="description">{{goal.description}}</div>
+    
+      <div class="date"><span>Complete by </span>{{goal.date}}<span> | Priority </span>{{goal.priority}}</div>
+    </div>
+</div>
+
+<div style="height: 503px;" (ngSubmit)="onSubmit()">
+        <label>
+            <input [(ngModel)]="goal.name" placeholder="name" style="width: 1140px; height: 35px; border-radius: 5px;" type="text" maxlength="20" required/>
+        </label>
+        <label>
+            <input [(ngModel)]="goal.date" placeholder="date" style="width: 1140px; height: 35px; border-radius: 5px;" type="date" required/>
+        </label>
+        <label>
+            <select [(ngModel)]="goal.priority" style="width: 1146px; height: 35px; border-radius: 5px; background-color: #e6e6e6" required>
+                <option *ngFor="let priority of priorites" [value]="priority">{{priority}}</option>
+            </select>
+        </label>
+        <label>
+            <textarea [(ngModel)]="goal.description" placeholder="description" style="width: 1140px; height: 150px; border-radius: 5px; background-color: #e6e6e6" maxlength="255"></textarea>
+        </label>
+        <button (click)="save()" class="btnsave" routerLink="/detail/{{goal.id}}">Save</button>
+        <button (click)="cancel()" class="btncancel">Cancel</button> 
+</div>

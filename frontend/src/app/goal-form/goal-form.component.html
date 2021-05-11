@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="height: 745px;">
     <div [hidden]="submitted">
       <h1>Goal Form</h1>
       <form (ngSubmit)="onSubmit()" #goalForm="ngForm">
@@ -37,7 +37,7 @@
         
         <div class="form-group">
             <p><label>Special Instructions</label></p>
-            <textarea name="description" style="width: 1140px; height: 375px; border-radius: 5px;" maxlength="255" [(ngModel)]="model.description" name="description"
+            <textarea name="description" style="width: 1140px; height: 150px; border-radius: 5px;" maxlength="255" [(ngModel)]="model.description" name="description"
             #description="ngModel"></textarea>
         </div>
 
