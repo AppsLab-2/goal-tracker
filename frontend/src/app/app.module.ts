@@ -15,6 +15,8 @@ import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { SearchComponent } from './search/search.component';
 import { MenuComponent } from './menu/menu.component';
 import { GoalEditComponent } from './goal-edit/goal-edit.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { GoalEditComponent } from './goal-edit/goal-edit.component';
     MatSliderModule,
     FormsModule,
     HttpClientModule,
+    MatButtonModule,
+    MatIconModule,
     //HttpClientInMemoryWebApiModule.forRoot(
       //InMemoryDataService, { dataEncapsulation: false })
   ],

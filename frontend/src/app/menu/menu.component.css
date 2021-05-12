@@ -35,6 +35,12 @@
 .btnhome{
     position: absolute;
     margin-top: -100px;
-    margin-left: 1800px;
-    padding-bottom: 3px;
+    margin-left: 1850px;
+    background-color: rgb(245, 187, 27);
+    color: black;
+}
+
+.btnhome:hover{
+    color: white;
+    background-color: rgb(230, 175, 26);
 }

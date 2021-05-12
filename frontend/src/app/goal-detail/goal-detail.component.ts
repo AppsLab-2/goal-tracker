@@ -11,6 +11,7 @@ import { GoalService } from '../goal.service';
 })
 export class GoalDetailComponent implements OnInit {
   goal!: Goal;
+  goals!: Goal[];
 
   constructor(
     private route: ActivatedRoute,
@@ -30,6 +31,11 @@ export class GoalDetailComponent implements OnInit {
 
   home(): void {
     this.location.back();
+  }
+
+  delete(goal: Goal): void{
+    this.goals = this.goals.filter(h => h !== goal);
+    this.goalService.deleteGoal(goal).subscribe();
   }
 
 }

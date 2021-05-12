@@ -2,7 +2,9 @@
     <img src="assets/trofej.png" alt="Trofej" width="65" height="65">
     <h1><strong>{{title}}</strong></h1>
 </div>
-<button class="menu" routerLink="/menu">menu</button>
+<button mat-mini-fab color="primary" routerLink="/menu" class="menu">
+    <mat-icon>menu</mat-icon>
+</button>
 <router-outlet></router-outlet>
 <div class="heel">
     <hr>
