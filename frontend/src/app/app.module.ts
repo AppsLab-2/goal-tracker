@@ -17,6 +17,9 @@ import { MenuComponent } from './menu/menu.component';
 import { GoalEditComponent } from './goal-edit/goal-edit.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { LoginComponent } from './login/login.component';
+import { CustomMaterialModule } from './material.module';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import {MatIconModule} from '@angular/material/icon';
     GoalDetailComponent,
     SearchComponent,
     MenuComponent,
-    GoalEditComponent
+    GoalEditComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,7 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatButtonModule,
     MatIconModule,
+    CustomMaterialModule ,
     //HttpClientInMemoryWebApiModule.forRoot(
       //InMemoryDataService, { dataEncapsulation: false })
   ],
