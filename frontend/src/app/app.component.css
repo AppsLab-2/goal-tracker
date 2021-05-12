@@ -24,6 +24,7 @@ body, input[type="text"], button {
 
 .head{
   text-align: center;
+  cursor: pointer;
 }
 
 .hr{
