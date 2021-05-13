@@ -19,6 +19,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
 import { CustomMaterialModule } from './material.module';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { CustomMaterialModule } from './material.module';
     MenuComponent,
     GoalEditComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

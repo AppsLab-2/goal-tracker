@@ -6,6 +6,7 @@ import { GoalDetailComponent } from './goal-detail/goal-detail.component';
 import { MenuComponent } from './menu/menu.component';
 import { GoalEditComponent } from './goal-edit/goal-edit.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'detail/:id', component: GoalDetailComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'edit/:id', component: GoalEditComponent },
+  { path: 'register', component: RegisterComponent },
 
 ];
 
