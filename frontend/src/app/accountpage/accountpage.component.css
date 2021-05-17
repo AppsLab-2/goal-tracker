@@ -1,0 +1,21 @@
+.account{
+    height: 500px;
+    width: 800px;
+    margin: 0px auto;
+    background-color: #eee;
+    border-radius: 10px;
+    margin-top: 130px;
+    margin-bottom: 50px;
+}
+
+img{
+    margin: 50px;
+}
+
+.username{
+    color: rgb(245, 187, 27);
+    font-size: xx-large;
+    margin-left: 300px;
+    margin-top: -200px;
+
+}

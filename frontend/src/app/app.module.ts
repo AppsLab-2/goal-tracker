@@ -20,6 +20,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { LoginComponent } from './login/login.component';
 import { CustomMaterialModule } from './material.module';
 import { RegisterComponent } from './register/register.component';
+import { AccountpageComponent } from './accountpage/accountpage.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { RegisterComponent } from './register/register.component';
     GoalEditComponent,
     LoginComponent,
     RegisterComponent,
+    AccountpageComponent,
   ],
   imports: [
     BrowserModule,
