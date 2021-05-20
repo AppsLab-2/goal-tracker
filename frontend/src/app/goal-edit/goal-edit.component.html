@@ -22,6 +22,6 @@
         <label>
             <textarea [(ngModel)]="goal.description" placeholder="description" style="width: 1140px; height: 150px; border-radius: 5px; background-color: #e6e6e6" maxlength="255"></textarea>
         </label>
-        <button (click)="save()" class="btnsave" routerLink="/detail/{{goal.id}}">Save</button>
+        <button (click)="save()" class="btnsave" routerLink="/detail/{{goal.id}}" [disabled]="goal.name === '' || goal.date === '' || goal.priority">Save</button>
         <button (click)="cancel()" class="btncancel">Cancel</button> 
 </div>

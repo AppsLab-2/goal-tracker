@@ -11,11 +11,10 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
 
   hide = true;
+  username = '';
+  password = '';
 
   constructor(private router: Router) { }
-
-  username: string;
-  password: string;
 
   ngOnInit() {
   }

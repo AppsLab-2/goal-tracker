@@ -10,6 +10,10 @@ export class RegisterComponent implements OnInit {
 
   hide = true;
   email = new FormControl('', [Validators.required, Validators.email]);
+  name = '';
+  surname = '';
+  password = '';
+  username = '';
 
   getErrorMessage() {
     if (this.email.hasError('required')) {
