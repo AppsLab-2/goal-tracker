@@ -1,0 +1,46 @@
+.menu{
+    margin: 0 auto;
+    margin-top: 29px;
+    margin-right: 640px; /*pri uprave centrovania stranky zmazat*/
+    display: block;
+    text-align: center;
+    height:719px;
+    width: 600px;
+    padding: 15px 0px;
+}
+
+.menubtn{
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    width: 600px;
+    height: 105px;
+    background-color: #eee;
+    border-radius: 5px;
+    border:none;
+    box-shadow: 4px 4px #e6e6e6;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3em;
+}
+
+.menubtn:hover{
+    background-color: #e6e6e6;
+    color: rgb(245, 187, 27);
+}
+
+.btnhome{
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 1850px;
+    background-color: rgb(245, 187, 27);
+    color: black;
+}
+
+.btnhome:hover{
+    color: white;
+    background-color: rgb(230, 175, 26);
+}

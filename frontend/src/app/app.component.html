@@ -1,7 +1,15 @@
-<div class="head">
-    <img src="assets/trofej.png" alt="Trofej" width="65" height="65">
+<div routerLink="/accountpage">
+    <img src="assets/profil.png" alt="Profil" width="40" height="40" class="profilimg">
+    <div class="username">{{username}}</div>
+</div>
+<div class="logout" routerLink="/login">Log out</div>
+<div class="head" routerLink="/homepage">
+    <img src="assets/trofej.png" alt="Trofej" width="65" height="65" class="logo">
     <h1><strong>{{title}}</strong></h1>
 </div>
+<button mat-mini-fab color="primary" routerLink="/menu" class="menu">
+    <mat-icon>menu</mat-icon>
+</button>
 <router-outlet></router-outlet>
 <div class="heel">
     <hr>

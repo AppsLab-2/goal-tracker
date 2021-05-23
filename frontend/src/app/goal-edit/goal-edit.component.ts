@@ -5,19 +5,24 @@ import { Location } from '@angular/common';
 import { GoalService } from '../goal.service';
 
 @Component({
-  selector: 'app-goal-detail',
-  templateUrl: './goal-detail.component.html',
-  styleUrls: ['./goal-detail.component.css']
+  selector: 'app-goal-edit',
+  templateUrl: './goal-edit.component.html',
+  styleUrls: ['./goal-edit.component.css']
 })
-export class GoalDetailComponent implements OnInit {
+export class GoalEditComponent implements OnInit {
   goal!: Goal;
-  goals!: Goal[];
 
   constructor(
     private route: ActivatedRoute,
     private goalService: GoalService,
     private location: Location
   ) { }
+
+  priorites = [ 5, 4, 3, 2, 1 ];
+
+  submitted = false;
+
+  onSubmit() { this.submitted = true; }
 
   ngOnInit(): void {
     this.getGoal();
@@ -29,13 +34,14 @@ export class GoalDetailComponent implements OnInit {
       .subscribe(goal => this.goal = goal);
   }
 
-  home(): void {
+  save(): void {
+    this.goalService.updateGoal(this.goal)
+      .subscribe(() => this.cancel());
+  }
+
+  cancel(): void {
     this.location.back();
   }
 
-  delete(goal: Goal): void{
-    this.goals = this.goals.filter(h => h !== goal);
-    this.goalService.deleteGoal(goal).subscribe();
-  }
-
 }
+

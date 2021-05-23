@@ -18,15 +18,13 @@ body, input[type="text"], button {
     color: #333;
     font-family: Cambria, Georgia, serif;
   }
-* {
-    font-family: Arial, Helvetica, sans-serif; 
-  }
 
 .head{
   text-align: center;
+  cursor: pointer;
 }
 
-.heel{
+.hr{
   display: block;
   width: 1920px;
   }
@@ -38,8 +36,55 @@ h4{
   color: rgb(245, 187, 27);  /* rgb(104, 101, 101)*/
 }
 
-img{
+.logo{
   position: absolute;
   margin-top: 22px;
   margin-left: -240px;
+}
+
+.menu{
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 1850px;
+  background-color: rgb(245, 187, 27);
+  color: black;
+}
+
+.menu:hover{
+  background-color: rgb(230, 175, 26);
+  color: white;
+}
+
+.profilimg{
+  position: absolute;
+  margin-top: 27px;
+  margin-left: 27px;
+  cursor: pointer;
+}
+
+.username{
+  position: absolute;
+  margin-top: 27px;
+  margin-left: 75px;
+  color: #eee;
+  font-size: large;
+  cursor: pointer;
+}
+
+.username:hover{
+  color: rgb(245, 187, 27);
+}
+
+.logout{
+  position: absolute;
+  margin-top: 48px;
+  margin-left: 76px;
+  color: #eee;
+  font-size: small;
+  cursor: pointer;
+}
+
+.logout:hover{
+  color: rgb(245, 187, 27);
+  text-decoration: underline;
 }

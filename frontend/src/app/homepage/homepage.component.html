@@ -1,3 +1,5 @@
+<div class="center">
+<app-search></app-search>
 <div class="marginbtn">
   <div class="dropdown">
     <button class="sort">{{sortBy}} ▼</button>
@@ -9,7 +11,7 @@
     </div>
   </div>
 </div>
-<div style="height:717px;width:1918px;padding: 15px 0px;border:none;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+<div style="height:717px;padding: 15px 0px;border:none;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
   <ul class="goals">
     <li *ngFor="let goal of goals">
       <a class="detail" routerLink="/detail/{{goal.id}}">
@@ -17,13 +19,13 @@
         <p class="date">Complete by {{goal.date}}</p>
       </a>
       <div class="drop">
-        <button class="options"><strong>...</strong></button>
-        <div class="optionsbtn">
-          <a class="option" (click)="do('Open',goal)">Open</a>
+        <button class="optionsbtn"><strong>...</strong></button>
+        <div class="optionsbox">
+          <a class="option" (click)="do('Open',goal)" routerLink="/detail/{{goal.id}}" >Open</a>
           <a class="option" (click)="do('Finish',goal)">Finish</a>
           <a class="option" (click)="do('Delete',goal)">Delete</a>
-          <a class="option" (click)="do('Edit',goal)">Edit</a>
-
+          <a class="option" (click)="do('Edit',goal)" routerLink="/edit/{{goal.id}}">Edit</a>
+          <!--<a class="option" (click)="do('Favourite',goal)">Add to favourite</a>-->
         </div>
       </div>
     </li>
@@ -31,4 +33,5 @@
   <div class="goals">
     <a routerLink="/goal-form"><button class="add">+</button></a>
   </div>
+</div>
 </div>

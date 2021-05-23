@@ -4,7 +4,6 @@
   text-align: center;
   padding: 25px;
   margin-top: 50px;
-  margin-bottom: 475px;
   margin-left: 500px;
   margin-right: 500px;
   background-color: #e6e6e6;
@@ -19,7 +18,7 @@
 }
 
 .date{
-  color: rgb(189, 185, 180);
+  color: rgb(180, 177, 173);
   font-size: 16px;
   font-family: Georgia, Times, 'Times New Roman', serif;
   text-align: left;
@@ -35,6 +34,29 @@
 
 .btnhome{
   position: absolute;
-  margin-left: 1800px;
-  margin-top: 30px;
+  margin-left: 1790px;
+  margin-top: 70px;
+  background-color: rgb(245, 187, 27);
+  color: black;
+}
+
+.btndelete{
+  position: absolute;
+  margin-left: 1720px;
+  margin-top: 70px;
+  background-color: rgb(245, 187, 27);
+  color: black;
+}
+
+.btnedit{
+  position: absolute;
+  margin-left: 1650px;
+  margin-top: 70px;
+  background-color: rgb(245, 187, 27);
+  color: black;
+}
+
+.btnhome:hover, .btnedit:hover, .btndelete:hover{
+  background-color: rgb(230, 175, 26);
+  color: white;
 }
