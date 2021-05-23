@@ -1,4 +1,4 @@
-package com.example.goalTracker;
+package com.example.goalTracker.Goals;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,9 +1,8 @@
-package com.example.goalTracker;
+package com.example.goalTracker.Goals;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.GregorianCalendar;
 
 @Entity
@@ -17,17 +16,20 @@ public class Goals {
     private GregorianCalendar date;
     private int priority;
     private String description;
+    @JsonIgnore
+    private boolean finished;
 
-    public Goals(int id, String name, GregorianCalendar date, int priority, String description) {
+
+    public Goals(int id, String name, GregorianCalendar date, int priority, String description, boolean finished) {
         this.id = id;
         this.name = name;
         this.date = date;
         this.priority = priority;
         this.description = description;
+        this.finished = finished;
     }
 
     public Goals (){
-
     }
 
     public int getId() {
@@ -50,6 +52,14 @@ public class Goals {
         return date;
     }
 
+    public boolean isFinished() {
+        return finished;
+    }
+
+    public void setFinished(boolean finished) {
+        this.finished = finished;
+    }
+
     public void setDate(GregorianCalendar date) {
         this.date = date;
     }
@@ -65,4 +75,5 @@ public class Goals {
     public String getDescription(){return description;}
 
     public void setDescription(String description){this.description = description;}
+
 }

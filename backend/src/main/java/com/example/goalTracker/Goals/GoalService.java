@@ -1,4 +1,5 @@
-package com.example.goalTracker;
+package com.example.goalTracker.Goals;
+
 
 public interface GoalService {
     void saveGoal(Goals goals);

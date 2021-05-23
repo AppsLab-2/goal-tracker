@@ -1,13 +1,14 @@
-package com.example.goalTracker;
+package com.example.goalTracker.Goals;
 
 import org.springframework.web.bind.annotation.*;
-
+import java.time.format.DateTimeFormatter;
 import java.util.GregorianCalendar;
 
 @RestController
 @RequestMapping("/api/")
 public class GoalControler {
     GoalService goalService;
+
     public GoalControler(GoalService goalService){
         this.goalService = goalService;
     }
@@ -20,17 +21,21 @@ public class GoalControler {
         goalService.saveGoal(goals);
     }
     @DeleteMapping("goals/{id}")
-    public void deleteGoal(@PathVariable Integer id){
+    public void deleteGoal(@RequestBody Integer id){
         goalService.deleteGoal(id);
     }
     @GetMapping("goals/{id}")
     public Goals getGoal(@PathVariable Integer id){
         return goalService.getGoal(id);
     }
-
-    /*@GetMapping("goals")
-    public void timer(@RequestBody Goals goals, GregorianCalendar dateNow ){
-        if(dateNow.after(goals.getDate()))
+    /*@GetMapping("goals/{date}")
+    public void timer(@PathVariable Goals goals, GregorianCalendar dateNow ){
+        if(dateNow.after(goals.getDate().toZonedDateTime()
+                .format(DateTimeFormatter.ofPattern("dd MM yyyy"))))
             goals.setPriority(5);
     }*/
+
+
+
 }
+

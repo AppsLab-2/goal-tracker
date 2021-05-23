@@ -49,7 +49,7 @@ export class HomepageComponent implements OnInit {
   }
 
   if(this.doBy === 'Open'){
-
+    
   }
 
   if(this.doBy === 'Finish'){
