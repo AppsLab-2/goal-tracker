@@ -12,6 +12,10 @@ import { GoalService } from '../goal.service';
 export class GoalEditComponent implements OnInit {
   goal!: Goal;
 
+  name = '';
+  date = '';
+  priority = '';
+
   constructor(
     private route: ActivatedRoute,
     private goalService: GoalService,
