@@ -19,28 +19,10 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 3em;
   }
-  
-.add{
-    background-color: rgb(245, 187, 27);
-    color: black;
-    box-shadow: 4px 4px rgb(230, 175, 26);
-    border: none;
-    border-radius: 5px;
-    margin-left: 20px;
-    padding: 35px 290px;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
-    font-size: xx-large;
-}
 
-.goals li:hover, .sort:hover, .options:hover {
+.goals li:hover, .sort:hover {
     background-color: #e6e6e6;
     color: rgb(245, 187, 27);
-}
-
-.add:hover {
-  background-color: rgb(230, 175, 26);
-  color: #eee;
 }
 
 .date{
@@ -111,50 +93,6 @@
 
 .detail:hover{
   color: rgb(245, 187, 27);
-}
-
-.optionsbtn{
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-size: x-large;
-  display: block;
-  margin: -105px 550px;
-  background-color: #eee;
-  color: black;
-  position: relative;
-  transform: rotate(90deg);
-}
-
-.optionsbox{
-  display: none;
-  position: absolute;
-  width: 80px;   /*155px pri add to favourite*/
-  z-index: 1;
-  background-color: #e6e6e6;
-  box-shadow: 2px 5px 5px 2px #9c9c9c;
-  margin-left: 600px;
-  margin-top: 60px;
-}
-
-.option{
-  padding: 12px 5px;
-  display: block;
-  text-decoration: none;
-  font-size: large;
-  color: black;
-}
-
-.option:hover {
-  background-color: #eee;
-  color: rgb(245, 187, 27);
-  cursor: pointer;
-}
-
-.drop:hover .optionsbox {
-  display: block;
 }
 
 .center{

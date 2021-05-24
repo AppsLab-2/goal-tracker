@@ -3,21 +3,21 @@ import { Goal } from '../goal';
 import { GoalService } from '../goal.service';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  selector: 'app-goal-finish',
+  templateUrl: './goal-finish.component.html',
+  styleUrls: ['./goal-finish.component.css']
 })
-export class HomepageComponent implements OnInit {
+export class GoalFinishComponent implements OnInit {
   goals!: Goal[];
   sortBy: string = 'ID';
-  doBy: string;
   finished: boolean;
-
 
   constructor(private goalService: GoalService) { }
 
   ngOnInit(): void {
-    this.getGoals();
+    if(this.finished == true){
+      this.getGoals();
+    }
   }
 
   getGoals(): void {
@@ -40,21 +40,4 @@ export class HomepageComponent implements OnInit {
       if(this.sortBy === 'Date')
       this.goals.sort((a,b) => a.date.localeCompare(b.date));
   }
-
-  do(doBy: string, goal: Goal){
-    this.doBy = doBy
-
-  if(this.doBy === 'Delete'){
-    this.goals = this.goals.filter(h => h !== goal);
-    this.goalService.deleteGoal(goal).subscribe();
-  }
-
-  if(this.doBy === 'Finish'){
-    this.finished = true;
-  }
-
-  }
 }
-
-
-

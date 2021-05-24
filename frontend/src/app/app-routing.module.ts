@@ -8,6 +8,7 @@ import { GoalEditComponent } from './goal-edit/goal-edit.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AccountpageComponent } from './accountpage/accountpage.component';
+import { GoalFinishComponent } from './goal-finish/goal-finish.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,7 @@ const routes: Routes = [
   { path: 'edit/:id', component: GoalEditComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'accountpage', component: AccountpageComponent },
-
+  { path: 'goal-finish', component: GoalFinishComponent },
 ];
 
 @NgModule({

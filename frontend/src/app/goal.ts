@@ -6,6 +6,7 @@ export class Goal {
     public date: string,
     public priority: number,
     public description: string,
+    public finished: boolean,
   ) {  }
   
 }

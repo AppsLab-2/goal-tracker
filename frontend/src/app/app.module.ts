@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { CustomMaterialModule } from './material.module';
 import { RegisterComponent } from './register/register.component';
 import { AccountpageComponent } from './accountpage/accountpage.component';
+import { GoalFinishComponent } from './goal-finish/goal-finish.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { AccountpageComponent } from './accountpage/accountpage.component';
     LoginComponent,
     RegisterComponent,
     AccountpageComponent,
+    GoalFinishComponent,
   ],
   imports: [
     BrowserModule,
