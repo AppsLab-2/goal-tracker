@@ -28,14 +28,5 @@ public class GoalControler {
     public Goals getGoal(@PathVariable Integer id){
         return goalService.getGoal(id);
     }
-    /*@GetMapping("goals/{date}")
-    public void timer(@PathVariable Goals goals, GregorianCalendar dateNow ){
-        if(dateNow.after(goals.getDate().toZonedDateTime()
-                .format(DateTimeFormatter.ofPattern("dd MM yyyy"))))
-            goals.setPriority(5);
-    }*/
-
-
-
 }
 
