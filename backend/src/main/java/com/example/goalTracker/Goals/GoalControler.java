@@ -1,8 +1,6 @@
 package com.example.goalTracker.Goals;
 
 import org.springframework.web.bind.annotation.*;
-import java.time.format.DateTimeFormatter;
-import java.util.GregorianCalendar;
 
 @RestController
 @RequestMapping("/api/")
@@ -21,7 +19,7 @@ public class GoalControler {
         goalService.saveGoal(goals);
     }
     @DeleteMapping("goals/{id}")
-    public void deleteGoal(@RequestBody Integer id){
+    public void deleteGoal(@PathVariable Integer id){
         goalService.deleteGoal(id);
     }
     @GetMapping("goals/{id}")

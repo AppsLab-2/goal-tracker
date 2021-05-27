@@ -16,20 +16,6 @@ public class ScoreController {
         this.userService = userService;
     }
 
-    @GetMapping
-    public ScoreDto getScore() {
-        User user = this.getCurrentUser();
-        long score = user.getScore();
-        return new ScoreDto(score);
-    }
-
-    @PostMapping
-    public void setScore(@RequestBody ScoreDto dto) {
-        User user = this.getCurrentUser();
-        user.setScore(dto.getScore());
-        this.userService.updateUser(user);
-    }
-
     private User getCurrentUser() {
         UserDetails userDetails = (UserDetails) SecurityContextHolder
                 .getContext()
