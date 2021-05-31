@@ -45,7 +45,6 @@ h4{
 .menu{
   position: absolute;
   margin-top: -100px;
-  margin-left: 1850px;
   background-color: rgb(245, 187, 27);
   color: black;
 }
@@ -87,4 +86,13 @@ h4{
 .logout:hover{
   color: rgb(245, 187, 27);
   text-decoration: underline;
+}
+
+.logprofil{
+  text-align: left;
+}
+
+.btnmenu{
+  text-align: right;
+  margin-right: 65px;
 }

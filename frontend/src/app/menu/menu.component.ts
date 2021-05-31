@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Goal } from '../goal';
 import { GoalService } from '../goal.service';
 
 @Component({
@@ -14,8 +13,4 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-/*
-  delete():void{  
-
-  }*/
 }

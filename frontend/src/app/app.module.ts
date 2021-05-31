@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { HomepageComponent } from './homepage/homepage.component';
 import { GoalFormComponent } from './goal-form/goal-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -48,6 +48,7 @@ import { GoalFinishComponent } from './goal-finish/goal-finish.component';
     MatButtonModule,
     MatIconModule,
     CustomMaterialModule ,
+    ReactiveFormsModule,
     //HttpClientInMemoryWebApiModule.forRoot(
       //InMemoryDataService, { dataEncapsulation: false })
   ],

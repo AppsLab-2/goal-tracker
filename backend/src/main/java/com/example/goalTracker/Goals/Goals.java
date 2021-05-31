@@ -16,7 +16,6 @@ public class Goals {
     private GregorianCalendar date;
     private int priority;
     private String description;
-    @JsonIgnore
     private boolean finished;
 
 

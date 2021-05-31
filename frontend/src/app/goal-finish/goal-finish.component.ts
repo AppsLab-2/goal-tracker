@@ -15,14 +15,14 @@ export class GoalFinishComponent implements OnInit {
   constructor(private goalService: GoalService) { }
 
   ngOnInit(): void {
-    if(this.finished == true){
-      this.getGoals();
-    }
+    this.getGoals();
   }
 
   getGoals(): void {
+    
     this.goalService.getGoals()
         .subscribe(goals => this.goals = goals);
+    
   }
 
   sort(sortBy: string) {

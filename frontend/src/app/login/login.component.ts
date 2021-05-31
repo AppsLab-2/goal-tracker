@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { GoalService } from '../goal.service';
 import {Router} from '@angular/router';
 
 
@@ -11,19 +12,26 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
 
   hide = true;
-  username = '';
-  password = '';
+  loginGroup = new FormGroup({
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+  });
 
-  constructor(private router: Router) { }
+
+  constructor(
+    private readonly goalService: GoalService,
+    private readonly router: Router) { }
 
   ngOnInit() {
   }
 
-  login() : void {
-    if(this.username == 'admin' && this.password == 'admin'){
-     this.router.navigate(["homepage"]);}
-    else if (this.username == 'user' && this.password == 'user'){
-    this.router.navigate(["homepage"]);}
+  login(): void {
+    if (this.loginGroup.valid) {
+      const username = this.loginGroup.value.username;
+      const password = this.loginGroup.value.password;
+      this.goalService.login(username, password)
+        .subscribe(() => this.router.navigateByUrl('/homepage'));
+    }
     else {
       alert("Username or password are invalid");
     }

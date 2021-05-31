@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Goal } from '../goal';
 import { GoalService } from '../goal.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-homepage',
@@ -12,9 +14,13 @@ export class HomepageComponent implements OnInit {
   sortBy: string = 'ID';
   doBy: string;
   finished: boolean;
+  goal: any;
+  control:boolean
 
 
-  constructor(private goalService: GoalService) { }
+  constructor(
+    private goalService: GoalService,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getGoals();
@@ -45,16 +51,54 @@ export class HomepageComponent implements OnInit {
     this.doBy = doBy
 
   if(this.doBy === 'Delete'){
-    this.goals = this.goals.filter(h => h !== goal);
-    this.goalService.deleteGoal(goal).subscribe();
+    let dialogRef = this.dialog.open(DeleteDialog,  {data: {}});
+    dialogRef.afterClosed().subscribe(result => {
+      if(result.control == true){
+      this.goals = this.goals.filter(h => h !== goal);
+      this.goalService.deleteGoal(goal).subscribe();
+      }
+    });
+    
+    //this.goals = this.goals.filter(h => h !== goal);
+    //this.goalService.deleteGoal(goal).subscribe();  
+    
   }
 
   if(this.doBy === 'Finish'){
-    this.finished = true;
+    goal.finished = true;
+    console.log("buus");
+    this.goalService.updateGoal(goal).subscribe();
+
   }
 
   }
 }
 
+@Component({
+  selector: 'delete-dialog',
+  templateUrl: 'delete-dialog.html',
+  styleUrls: ['delete-dialog.css']
+})
+export class DeleteDialog {
 
+  goals!: Goal[];
+
+
+
+  constructor(
+    private goalService: GoalService,
+    public dialog: MatDialog,
+    public dialogRef: MatDialogRef<DeleteDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {}
+
+  delete(): void {
+    this.data.control = true;
+    this.dialogRef.close(this.data);
+  }
+
+  cancel(): void {
+    this.data.control = false;
+    this.dialogRef.close(this.data);
+  }
+}
 
