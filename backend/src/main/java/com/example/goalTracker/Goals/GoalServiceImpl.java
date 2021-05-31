@@ -22,7 +22,7 @@ public class GoalServiceImpl implements GoalService{
 
     }
     @Override
-    public Iterable<Goals> returnGoal(){
+    public Iterable<Goals> returnUnfinishedGoal(){
         List<Goals> result = StreamSupport.stream(goalRepository.findAll().spliterator(), false).filter(n -> !n.isFinished()).collect(Collectors.toList());
         return result;
     }
@@ -34,4 +34,10 @@ public class GoalServiceImpl implements GoalService{
     public Goals getGoal(Integer id){
         return goalRepository.findById(id).get();
     }
+    @Override
+    public Iterable<Goals> returnFinishedGoal(){
+        List<Goals> result = StreamSupport.stream(goalRepository.findAll().spliterator(), false).filter(n -> n.isFinished()).collect(Collectors.toList());
+        return result;
+    }
+
 }
