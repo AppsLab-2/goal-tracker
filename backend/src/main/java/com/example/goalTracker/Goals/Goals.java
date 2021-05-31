@@ -13,13 +13,13 @@ public class Goals {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String name;
-    private GregorianCalendar date;
+    private String date;
     private int priority;
     private String description;
     private boolean finished;
 
 
-    public Goals(int id, String name, GregorianCalendar date, int priority, String description, boolean finished) {
+    public Goals(int id, String name, String date, int priority, String description, boolean finished) {
         this.id = id;
         this.name = name;
         this.date = date;
@@ -47,7 +47,7 @@ public class Goals {
         this.name = name;
     }
 
-    public GregorianCalendar getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -59,7 +59,7 @@ public class Goals {
         this.finished = finished;
     }
 
-    public void setDate(GregorianCalendar date) {
+    public void setDate(String date) {
         this.date = date;
     }
 

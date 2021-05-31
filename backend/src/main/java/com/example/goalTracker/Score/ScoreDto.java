@@ -18,5 +18,4 @@ public class ScoreDto {
     public void setScore(long score) {
         this.score = score;
     }
-
 }

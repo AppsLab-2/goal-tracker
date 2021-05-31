@@ -25,13 +25,13 @@ public class GoalServiceImpl implements GoalService{
     public Iterable<Goals> returnGoal(){
         List<Goals> result = StreamSupport.stream(goalRepository.findAll().spliterator(), false).filter(n -> !n.isFinished()).collect(Collectors.toList());
         return result;
-
-
     }
     @Override
     public void deleteGoal(Integer id){
         goalRepository.deleteById(id);
     }
     @Override
-    public Goals getGoal(Integer id){return goalRepository.findById(id).get();}
+    public Goals getGoal(Integer id){
+        return goalRepository.findById(id).get();
+    }
 }
