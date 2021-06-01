@@ -19,10 +19,10 @@ export class GoalFinishComponent implements OnInit {
   }
 
   getGoals(): void {
-    
+
     this.goalService.getGoals()
         .subscribe(goals => this.goals = goals);
-    
+
   }
 
   sort(sortBy: string) {
