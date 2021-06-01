@@ -11,15 +11,15 @@ public class GoalControler {
         this.goalService = goalService;
     }
     @GetMapping("goals")
-    public Iterable<Goals> finishedHistory(){
-        return(goalService.returnFinishedGoal());
+    public Iterable<Goals> allGoals(){
+        return(goalService.returnGoals());
     }
-    @GetMapping("goals")
+    @GetMapping("finishedGoals")
     public Iterable<Goals> mainPage(){
-        return (goalService.returnUnfinishedGoal());
+        return (goalService.returnFinishedGoals());
     }
     @PostMapping("goals")
-    public void dotaznik(@RequestBody Goals goals){
+    public void questionnaire(@RequestBody Goals goals){
         goalService.saveGoal(goals);
     }
     @DeleteMapping("goals/{id}")
